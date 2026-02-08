@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 17, 24, 39;
+    --background-end-rgb: 17, 24, 39;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar Hiding */
+html,
+body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* Content Styling */
+.content-scroller {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.floating-content {
+    transition: transform 0.3s ease-out;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(17, 24, 39, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Typography Overrides for Prose if needed, though Tailwind typography plugin handles most */
+.prose h1,
+.prose h2,
+.prose h3 {
+    color: #fff;
+}
+
+.prose p,
+.prose ul,
+.prose blockquote {
+    color: #d1d5db;
+}
+
+.prose a {
+    color: #6366f1;
+    text-decoration: none;
+}
+
+.prose a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery Hover Effects */
+.gallery-image-wrapper {
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.gallery-image-wrapper img {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-image-wrapper:hover img {
+    transform: scale(1.05);
+}
