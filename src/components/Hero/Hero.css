@@ -29,7 +29,7 @@
 .hero__orb--1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #6366f1, transparent 70%);
+    background: radial-gradient(circle, #0ea5e9, transparent 70%);
     top: -10%;
     right: -5%;
     animation: orbFloat1 8s ease-in-out infinite;
@@ -38,7 +38,7 @@
 .hero__orb--2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #8b5cf6, transparent 70%);
+    background: radial-gradient(circle, #06b6d4, transparent 70%);
     bottom: -10%;
     left: -5%;
     animation: orbFloat2 10s ease-in-out infinite;
@@ -121,7 +121,7 @@
 .hero__shape--1 {
     width: 80px;
     height: 80px;
-    border: 2px solid #6366f1;
+    border: 2px solid #0ea5e9;
     border-radius: 16px;
     top: 15%;
     left: 8%;
@@ -131,7 +131,7 @@
 .hero__shape--2 {
     width: 50px;
     height: 50px;
-    border: 2px solid #8b5cf6;
+    border: 2px solid #06b6d4;
     border-radius: 50%;
     top: 25%;
     right: 12%;
@@ -143,7 +143,7 @@
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-bottom: 52px solid rgba(167, 139, 250, 0.15);
+    border-bottom: 52px solid rgba(34, 211, 238, 0.15);
     bottom: 20%;
     left: 15%;
     animation: shapeFloat 9s ease-in-out infinite 1s;
@@ -152,7 +152,7 @@
 .hero__shape--4 {
     width: 40px;
     height: 40px;
-    background: rgba(99, 102, 241, 0.06);
+    background: rgba(14, 165, 233, 0.06);
     border-radius: 8px;
     bottom: 30%;
     right: 10%;
@@ -185,8 +185,8 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     animation: gridPan 30s linear infinite;
 }
@@ -214,8 +214,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -379,7 +379,7 @@
 
 .hero__btn--primary:hover {
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.55);
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.55);
 }
 
 /* Shimmer sweep on primary button */
@@ -436,7 +436,7 @@
     background: var(--bg-glass-hover);
     border-color: var(--border-glow);
     transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
 }
 
 /* Stats */

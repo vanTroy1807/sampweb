@@ -115,14 +115,14 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: rgba(99, 102, 241, 0.12);
+    background: rgba(14, 165, 233, 0.12);
     color: var(--accent-tertiary);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(14, 165, 233, 0.2);
     transition: all 0.3s ease;
 }
 
 .clubs__card:hover .clubs__card-badge {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(14, 165, 233, 0.2);
     transform: translateY(-2px);
 }
 
@@ -158,7 +158,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, transparent 40%, rgba(99, 102, 241, 0.08));
+    background: linear-gradient(135deg, transparent 40%, rgba(14, 165, 233, 0.08));
     opacity: 0;
     transition: opacity 0.3s ease;
 }

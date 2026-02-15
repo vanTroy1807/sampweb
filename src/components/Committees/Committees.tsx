@@ -15,7 +15,7 @@ const committees: CommitteeData[] = [
         title: 'Technical Committee',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-        color: '#6366f1',
+        color: '#0ea5e9',
         highlights: ['Horizon Tech Fest', 'Hackathons', 'Workshops', 'Tech Talks'],
     },
     {

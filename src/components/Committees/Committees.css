@@ -35,7 +35,7 @@
 
 .committees__card:hover {
     border-color: var(--card-accent, var(--border-glow));
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 30px color-mix(in srgb, var(--card-accent, #6366f1) 15%, transparent);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 30px color-mix(in srgb, var(--card-accent, #0ea5e9) 15%, transparent);
 }
 
 .committees__card-glow {
@@ -107,8 +107,8 @@
 
 .committees__tag {
     padding: 0.35rem 0.85rem;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.15);
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.15);
     border-radius: 20px;
     font-size: 0.78rem;
     font-weight: 500;
@@ -133,8 +133,8 @@
 }
 
 .committees__tag:hover {
-    background: rgba(99, 102, 241, 0.2);
-    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(14, 165, 233, 0.2);
+    border-color: rgba(14, 165, 233, 0.4);
     transform: translateY(-2px);
 }
 
@@ -161,7 +161,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, transparent, rgba(99, 102, 241, 0.05));
+    background: linear-gradient(135deg, transparent, rgba(14, 165, 233, 0.05));
     opacity: 0;
     transition: opacity 0.3s ease;
 }

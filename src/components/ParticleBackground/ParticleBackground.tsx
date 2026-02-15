@@ -11,7 +11,7 @@ interface Particle {
     color: string;
 }
 
-const COLORS = ['#6366f1', '#8b5cf6', '#a78bfa', '#06b6d4', '#f59e0b'];
+const COLORS = ['#0ea5e9', '#06b6d4', '#22d3ee', '#06b6d4', '#f59e0b'];
 
 const ParticleBackground: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);

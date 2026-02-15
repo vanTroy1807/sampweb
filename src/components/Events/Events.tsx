@@ -17,7 +17,7 @@ const events: EventData[] = [
         emoji: '🚀',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        color: '#6366f1',
+        color: '#0ea5e9',
     },
     {
         title: 'Olympus — Sports Fest',
@@ -62,7 +62,7 @@ const events: EventData[] = [
         emoji: '🎤',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        color: '#8b5cf6',
+        color: '#06b6d4',
     },
 ];
 
