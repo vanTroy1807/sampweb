@@ -59,7 +59,7 @@ const SplashScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
 
             {/* Title & Tagline */}
             <div className={`splash__text ${phase === 'tagline' || phase === 'exit' ? 'splash__text--visible' : ''}`}>
-                <h1 className="splash__title">Student Gymkhana</h1>
+                <h1 className="splash__title">Student Activity Centre</h1>
                 <p className="splash__tagline">IIITV — International Campus Diu</p>
                 <div className="splash__divider"></div>
                 <p className="splash__motto">Empowering Excellence</p>

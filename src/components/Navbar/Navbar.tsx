@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
       <div className="navbar__container container">
         <a href="#home" className="navbar__logo" onClick={() => handleLinkClick('#home')}>
           <div className="navbar__logo-icon">SG</div>
-          <span className="navbar__logo-text">Student Gymkhana</span>
+          <span className="navbar__logo-text">Student Activity Centre</span>
         </a>
 
         <ul className={`navbar__links ${isOpen ? 'navbar__links--open' : ''}`}>

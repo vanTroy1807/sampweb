@@ -10,7 +10,7 @@ const quickLinks = [
 ];
 
 const resources = [
-    { label: 'Gymkhana Constitution', href: '#' },
+    { label: 'Student Activity Centre Constitution', href: '#' },
     { label: 'Academic Calendar', href: '#' },
     { label: 'Moodle', href: '#' },
     { label: 'Library', href: '#' },
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                     <div className="footer__brand">
                         <div className="footer__logo">
                             <div className="footer__logo-icon">SG</div>
-                            <span className="footer__logo-text">Student Gymkhana</span>
+                            <span className="footer__logo-text">Student Activity Centre</span>
                         </div>
                         <p className="footer__brand-desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -67,14 +67,14 @@ const Footer: React.FC = () => {
                         <h4 className="footer__links-title">Contact Us</h4>
                         <div className="footer__contact-info">
                             <p>📍 IIIT Vadodara — ICD, Diu</p>
-                            <p>📧 gymkhana@iiitvadodara.ac.in</p>
+                            <p>📧 studentactivitycentre@iiitvadodara.ac.in</p>
                             <p>📞 +91-XXXXX XXXXX</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer__bottom">
-                    <p>&copy; {new Date().getFullYear()} Student Gymkhana, IIITV-ICD. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Student Activity Centre, IIITV-ICD. All rights reserved.</p>
                     <p className="footer__credits">
                         Designed &amp; Developed with 💜
                     </p>

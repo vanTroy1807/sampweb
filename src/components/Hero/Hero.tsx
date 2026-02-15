@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     const stat3 = useCountUp(20, 2000, '+');
 
     // Typewriter effect
-    const fullText = 'Gymkhana';
+    const fullText = 'Activity Centre';
     const [typed, setTyped] = useState('');
     const [showCursor, setShowCursor] = useState(true);
 

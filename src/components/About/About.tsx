@@ -5,7 +5,7 @@ const About: React.FC = () => {
         <section id="about" className="about">
             <div className="container">
                 <div className="section-header reveal">
-                    <h2>About Student Gymkhana</h2>
+                    <h2>About Student Activity Centre</h2>
                     <p>The heart of student life at IIITV-ICD</p>
                     <div className="section-divider"></div>
                 </div>
@@ -32,7 +32,7 @@ const About: React.FC = () => {
 
                     <div className="about__image reveal reveal-delay-2">
                         <div className="about__image-placeholder">
-                            <span className="about__image-alt">Student Gymkhana Group Photo</span>
+                            <span className="about__image-alt">Student Activity Centre Group Photo</span>
                             <div className="about__image-icon">🎓</div>
                         </div>
                     </div>
