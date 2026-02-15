@@ -1,0 +1,519 @@
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #060a15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.splash--exit {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+}
+
+/* ===== Animated Background Grid ===== */
+.splash__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: splashGridPan 20s linear infinite;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+}
+
+@keyframes splashGridPan {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 50px 50px;
+    }
+}
+
+/* ===== Orbiting Rings ===== */
+.splash__rings {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash__ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.splash__ring--1 {
+    width: 200px;
+    height: 200px;
+    border-color: rgba(99, 102, 241, 0.15);
+    animation: ringRotate 6s linear infinite, ringPulse 3s ease-in-out infinite;
+}
+
+.splash__ring--2 {
+    width: 280px;
+    height: 280px;
+    border-color: rgba(139, 92, 246, 0.1);
+    border-style: dashed;
+    animation: ringRotate 10s linear infinite reverse, ringPulse 4s ease-in-out infinite 0.5s;
+}
+
+.splash__ring--3 {
+    width: 360px;
+    height: 360px;
+    border-color: rgba(167, 139, 250, 0.06);
+    border-width: 2px;
+    animation: ringRotate 15s linear infinite, ringPulse 5s ease-in-out infinite 1s;
+}
+
+@keyframes ringRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        transform: rotate(var(--r, 0deg)) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(var(--r, 0deg)) scale(1.05);
+        opacity: 0.6;
+    }
+}
+
+/* ===== Central Logo ===== */
+.splash__logo {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.splash__logo--shrink {
+    transform: scale(0.7) translateY(-60px);
+}
+
+@keyframes logoEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(-180deg);
+        filter: blur(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+}
+
+.splash__logo-shape {
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:
+        0 0 40px rgba(99, 102, 241, 0.4),
+        0 0 80px rgba(99, 102, 241, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    animation: logoGlow 2s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 40px rgba(99, 102, 241, 0.4),
+            0 0 80px rgba(99, 102, 241, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 60px rgba(99, 102, 241, 0.6),
+            0 0 120px rgba(99, 102, 241, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+}
+
+.splash__logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.splash__logo-pulse {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+    border: 2px solid rgba(99, 102, 241, 0.4);
+    animation: logoPulseRing 2s ease-out infinite;
+}
+
+@keyframes logoPulseRing {
+    from {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* ===== Three Pillars ===== */
+.splash__pillars {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.splash__pillar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: scale(0) translateY(0);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.splash__pillars--visible .splash__pillar {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Position pillars in a triangle around logo */
+.splash__pillar--tech {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition-delay: 0s;
+}
+
+.splash__pillars--visible .splash__pillar--tech {
+    transform: translateX(-50%) scale(1);
+}
+
+.splash__pillar--cultural {
+    bottom: 30px;
+    left: 20px;
+    transition-delay: 0.15s;
+}
+
+.splash__pillars--visible .splash__pillar--cultural {
+    transform: scale(1);
+}
+
+.splash__pillar--sports {
+    bottom: 30px;
+    right: 20px;
+    transition-delay: 0.3s;
+}
+
+.splash__pillars--visible .splash__pillar--sports {
+    transform: scale(1);
+}
+
+.splash__pillar-icon {
+    font-size: 2.5rem;
+    animation: pillarBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 15px rgba(99, 102, 241, 0.3));
+}
+
+.splash__pillar--tech .splash__pillar-icon {
+    animation-delay: 0s;
+}
+
+.splash__pillar--cultural .splash__pillar-icon {
+    animation-delay: 0.3s;
+}
+
+.splash__pillar--sports .splash__pillar-icon {
+    animation-delay: 0.6s;
+}
+
+@keyframes pillarBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.splash__pillar-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(167, 139, 250, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* ===== SVG Connecting Lines ===== */
+.splash__lines {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: 5;
+}
+
+.splash__line {
+    stroke: rgba(99, 102, 241, 0.2);
+    stroke-width: 1;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.splash__lines--visible .splash__line {
+    stroke-dashoffset: 0;
+}
+
+.splash__lines--visible .splash__line:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.splash__lines--visible .splash__line:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.splash__lines--visible .splash__line:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* ===== Title Text ===== */
+.splash__text {
+    position: absolute;
+    bottom: 18%;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.splash__text--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.splash__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #f1f5f9, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    animation: splashTitleShimmer 3s ease infinite;
+    background-size: 200% auto;
+}
+
+@keyframes splashTitleShimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.splash__tagline {
+    font-size: 1rem;
+    color: rgba(148, 163, 184, 0.8);
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: taglineFade 0.5s ease 0.3s both;
+}
+
+@keyframes taglineFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.splash__divider {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    margin: 0.75rem auto;
+    opacity: 0;
+    animation: divFade 0.4s ease 0.5s both;
+}
+
+@keyframes divFade {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 50px;
+    }
+}
+
+.splash__motto {
+    font-size: 0.85rem;
+    color: rgba(99, 102, 241, 0.7);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: taglineFade 0.5s ease 0.7s both;
+}
+
+/* ===== Floating Particles ===== */
+.splash__particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.splash__particle {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.4);
+    animation: particleFloat var(--duration) ease-in-out var(--delay) infinite alternate;
+    box-shadow: 0 0 6px rgba(99, 102, 241, 0.3);
+}
+
+@keyframes particleFloat {
+    from {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: translateY(-30px) translateX(15px);
+        opacity: 0.8;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .splash__rings {
+        width: 300px;
+        height: 300px;
+    }
+
+    .splash__ring--1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .splash__ring--2 {
+        width: 210px;
+        height: 210px;
+    }
+
+    .splash__ring--3 {
+        width: 270px;
+        height: 270px;
+    }
+
+    .splash__pillars,
+    .splash__lines {
+        width: 300px;
+        height: 300px;
+    }
+
+    .splash__logo-shape {
+        width: 80px;
+        height: 80px;
+    }
+
+    .splash__logo-pulse {
+        width: 80px;
+        height: 80px;
+    }
+
+    .splash__logo-text {
+        font-size: 1.8rem;
+    }
+
+    .splash__pillar-icon {
+        font-size: 2rem;
+    }
+
+    .splash__text {
+        bottom: 12%;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .splash {
+        transition-duration: 0.1s;
+    }
+
+    .splash__ring,
+    .splash__pillar-icon,
+    .splash__particle {
+        animation: none;
+    }
+
+    .splash__logo {
+        animation-duration: 0.1s;
+    }
+}
